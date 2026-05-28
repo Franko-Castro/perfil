@@ -1,0 +1,243 @@
+<nav class="barra-de-navegacion" id="nav-principal">
+    <div class="nav-contenedor">
+        <!-- Logo / Nombre -->
+        <a href="index.html" class="nav-logo">FM<span>.</span></a>
+
+        <!-- Links de navegación -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li><a href="#" class="nav-link">Proyectos</a></li>
+            <li><a href="#" class="nav-link">Sobre mí</a></li>
+            <li><a href="#" class="nav-link">Contacto</a></li>
+        </ul>
+        <!-- Botón hamburguesa (móvil) -->
+        <button class="nav-hamburguesa" id="nav-hamburguesa" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<style>
+    /* BARRA DE NAVEGACIÓN */
+    .barra-de-navegacion {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(5, 5, 5, 0.7);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .barra-de-navegacion.mostrar {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-contenedor {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 24px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    /* Logo */
+    .nav-logo {
+        font-size: 22px;
+        font-weight: 800;
+        color: #ffffff;
+        text-decoration: none;
+        letter-spacing: 2px;
+        flex-shrink: 0;
+    }
+
+    .nav-logo span {
+        color: #39ff14;
+    }
+
+    /* Links */
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        /* Centrado absoluto respecto al nav */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-link {
+        color: #a0a0a0;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        padding: 6px 14px;
+        border-radius: 8px;
+        transition: color 0.2s, background 0.2s;
+    }
+
+    .nav-link:hover,
+    .nav-link.activo {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.07);
+    }
+
+    .nav-link.activo {
+        color: #39ff14;
+        background: rgba(57, 255, 20, 0.08);
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .resultado-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        cursor: pointer;
+        transition: background 0.15s;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .resultado-item:last-child {
+        border-bottom: none;
+    }
+
+    .resultado-item:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .resultado-icono {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background: rgba(57, 255, 20, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 14px;
+    }
+
+    .resultado-texto {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .resultado-titulo {
+        font-size: 13px;
+        font-weight: 600;
+        color: #ffffff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .resultado-subtitulo {
+        font-size: 11px;
+        color: #606060;
+        margin-top: 2px;
+    }
+
+    .resultado-titulo mark {
+        background: transparent;
+        color: #39ff14;
+        font-weight: 700;
+    }
+
+    .buscador-sin-resultados {
+        padding: 20px 16px;
+        text-align: center;
+        color: #606060;
+        font-size: 13px;
+    }
+
+    .buscador-sin-resultados strong {
+        color: #a0a0a0;
+    }
+
+    /* ============================================
+       HAMBURGUESA (móvil)
+    ============================================ */
+    .nav-hamburguesa {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        margin-left: auto;
+    }
+
+    .nav-hamburguesa span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #ffffff;
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+
+    @media (max-width: 768px) {
+        .nav-hamburguesa {
+            display: flex;
+        }
+
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 64px;
+            left: 0;
+            right: 0;
+            transform: none;
+            flex-direction: column;
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(16px);
+            padding: 16px;
+            gap: 4px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .nav-links.abierto {
+            display: flex;
+        }
+
+        .nav-buscador {
+            margin-left: auto;
+        }
+
+        .buscador-input-wrapper {
+            width: 160px;
+        }
+
+        .buscador-input-wrapper:focus-within {
+            width: 200px;
+        }
+    }
+</style>

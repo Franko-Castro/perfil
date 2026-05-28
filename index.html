@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio - de Frank martinez Abbas</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cv-bg': '#050505',
+                        'cv-green': '#39ff14',
+                        'cv-gray-light': '#a0a0a0',
+                        'cv-gray-dark': '#1a1a1a',
+                        'cv-glass-bg': 'rgba(255, 255, 255, 0.05)',
+                        'cv-glass-border': 'rgba(255, 255, 255, 0.1)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="estilos.css" rel="stylesheet" />
+</head>
+
+<body class="antialiased min-h-screen relative">
+    <!-- BEGIN: Navigation Container -->
+    <div id="contenedor-navegacion"></div>
+    <!-- END: Navigation Container -->
+    <!-- BEGIN: Background Image Layer -->
+    <div aria-hidden="true" class="main-image-container">
+        <img alt="Frank Martinez Portrait" class="main-image"
+            src="imagenes/WhatsApp%20Image%202026-05-26%20at%207.21.38%20PM-fotor-enhance-20260526193546.jpg" />
+        <div class="vignette"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-cv-bg via-transparent to-cv-bg opacity-90"></div>
+        <div class="bottom-gradient"></div>
+    </div>
+    <!-- END: Background Image Layer -->
+    <!-- BEGIN: Main Content Area -->
+    <main class="relative z-10 container mx-auto px-6 pt-24 pb-12 lg:pt-28 lg:pb-24 min-h-screen flex flex-col justify-between">
+        <!-- BEGIN: Header Section -->
+        <header class="text-center lg:text-left mb-16 relative z-20 pl-0 lg:pl-[15%]">
+            <h1
+                class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none mb-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
+                <span class="block text-4xl md:text-6xl lg:text-7xl font-light tracking-widest text-white mb-2">FRANK
+                    DAVID</span>
+                MARTINEZ
+            </h1>
+            <h2 class="text-xl md:text-2xl font-bold tracking-widest text-cv-gray-light uppercase mt-4">
+                DESARROLLADOR DE SOFTWARE</h2>
+        </header>
+        <!-- END: Header Section -->
+        <!-- BEGIN: Grid Layout for Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-20">
+            <!-- Left Column -->
+            <div class="lg:col-span-3 flex flex-col gap-8">
+                <!-- Creative Journey Panel -->
+                <section class="glass-panel p-6 shadow-2xl">
+                    <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-sm">Trayectoria Creativa</h3>
+                    <ul class="space-y-4 text-xs">
+                        <li>
+                            <h4 class="text-white font-semibold">Arab Company</h4>
+                            <p class="text-cv-gray-light">Software Developer</p>
+                        </li>
+                        <li>
+                            <h4 class="text-white font-semibold">Print Gate</h4>
+                            <p class="text-cv-gray-light">Software Developer</p>
+                        </li>
+                        <li>
+                            <h4 class="text-white font-semibold">Business Print</h4>
+                            <p class="text-cv-gray-light">Software Developer</p>
+                        </li>
+                        <li>
+                            <h4 class="text-white font-semibold">4 COLOR</h4>
+                            <p class="text-cv-gray-light">Senior Software Developer</p>
+                        </li>
+                        <li>
+                            <h4 class="text-white font-semibold">Cubes</h4>
+                            <p class="text-cv-gray-light">Senior Software Developer</p>
+                        </li>
+                        <li>
+                            <h4 class="text-white font-semibold">Koiak</h4>
+                            <p class="text-cv-gray-light">Senior Software Developer</p>
+                        </li>
+                        <li>
+                            <h4 class="text-white font-semibold">Dynamics</h4>
+                            <p class="text-cv-gray-light">Tech Lead</p>
+                        </li>
+                        <li>
+                            <h4 class="text-white font-semibold">4 Brothers</h4>
+                            <p class="text-cv-gray-light">Tech Lead</p>
+                        </li>
+                        <li>
+                            <h4 class="text-white font-semibold">TMS</h4>
+                            <p class="text-cv-gray-light">Tech Lead</p>
+                        </li>
+                        <li class="pt-2">
+                            <h4 class="text-white font-bold">Instructor Full Stack Dev</h4>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <!-- Center Spacer (for portrait) -->
+            <div class="lg:col-span-5 hidden lg:block"></div>
+            <!-- Right Column -->
+            <div class="lg:col-span-4 flex flex-col justify-between gap-12">
+                <!-- Top Right: Education -->
+                <section class="text-right pr-4 lg:pr-12 pt-8">
+                    <h3 class="text-white font-bold text-xl uppercase tracking-wider mb-4">Educación</h3>
+                    <ul class="space-y-2 text-xs text-cv-gray-light text-right flex flex-col items-end">
+                        <li>- Desarrollo de Software</li>
+                        <li>- Certificado de programacion</li>
+                        <li>- Certificado de desarrollo de software + IA</li>
+                        <li>- Técnico en sistemas</li>
+                    </ul>
+                </section>
+                <!-- Middle Right: Skills -->
+                <section class="text-right pr-4 lg:pr-12">
+                    <h3 class="text-cv-green font-bold text-sm mb-4">Nivel de Habilidades</h3>
+                    <ul class="space-y-1.5 text-xs text-cv-gray-light font-medium flex flex-col items-end">
+                        <li>Arquitectura de Software</li>
+                    <li>Git bash / GitHub</li>
+                    <li>docker</li>
+                        <li>Node.js / Express</li>
+                        <li>Resolución de Problemas</li>
+                        <li>Bases de Datos (SQL/NoSQL)</li>
+                        <li>Integración de APIs</li>
+                        <li>Optimización de Rendimiento</li>
+                        <li>Desarrollo Frontend</li>
+                        <li>Desarrollo Backend</li>
+                        <li>Desarrollo Ágil</li>
+                        <li>Trabajo en Equipo</li>
+                        <li>Estrategia de Código</li>
+                        <Li>liderazgo</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <!-- END: Grid Layout for Content -->
+        <!-- BEGIN: Bottom Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-12 relative z-20 pb-12">
+            <!-- Bottom Left: Clients & Links -->
+            <div class="lg:col-span-4 flex flex-col gap-6">
+                <!-- Portfolio Link -->
+                <a class="flex items-center gap-4 group cursor-pointer hover:opacity-80 transition-opacity w-max"
+                    href="https://github.com/Franko-Castro" rel="noopener noreferrer" target="_blank">
+                    <div
+                        class="text-5xl font-bold text-white bg-black w-16 h-16 flex items-center justify-center rounded">
+                        GH
+                    </div>
+                    <div>
+                        <p class="text-white font-bold tracking-widest text-sm">REPOSITORIO</p>
+                        <p class="text-cv-gray-light text-[10px] uppercase tracking-widest">Haz Clic Aquí</p>
+                        <p class="text-xs text-cv-gray-light mt-1">https://github.com/Franko-Castro</p>
+                    </div>
+                </a>
+                <!-- Mega Clients Panel -->
+                <section class="glass-panel p-6 mt-4 max-w-sm">
+                    <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-sm">Herramientas</h3>
+                    <div class="grid grid-cols-3 gap-6 items-center justify-items-center opacity-80 filter grayscale">
+                        <!-- Placeholders for client logos -->
+                        <img alt="Client Logo 1" class="h-8 object-contain"
+                            src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/docker.svg" />
+                        <img alt="Client Logo 2" class="h-8 object-contain"
+                            src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/html-light.svg" />
+                        <img alt="Client Logo 3" class="h-8 object-contain"
+                            src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/css-light.svg" />
+                        <img alt="Client Logo 4" class="h-6 object-contain"
+                            src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/php-light.svg" />
+                        <img alt="Client Logo 5" class="h-6 object-contain"
+                            src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/javascript-light.svg" />
+                        <img alt="Client Logo 6" class="h-8 object-contain"
+                            src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/mysql.svg" />
+                        <img alt="Client Logo 7" class="h-6 object-contain"
+                            src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/flutter.svg" />
+                        <img alt="Client Logo 8" class="h-8 object-contain"
+                            src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/supabase.svg" />
+                        <img alt="Client Logo 9" class="h-10 object-contain"
+                            src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/python.svg" />
+                    </div>
+                </section>
+            </div>
+            <!-- Bottom Center Spacer -->
+            <div class="lg:col-span-2 hidden lg:block"></div>
+            <!-- Bottom Right: Creative DNA -->
+            <div class="lg:col-span-6 flex items-end justify-end mt-8 lg:mt-0">
+                <section class="glass-panel p-8 max-w-xl border border-white/10 bg-white/5 backdrop-blur-md">
+                    <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-lg">SOBRE MI</h3>
+                    <div class="flex gap-8 mb-6">
+                        <div>
+                            <p class="text-cv-green font-bold text-xl">0</p>
+                            <p class="text-cv-gray-light text-[10px] tracking-widest uppercase">Clientes</p>
+                        </div>
+                        <div>
+                            <p class="text-cv-green font-bold text-xl">25</p>
+                            <p class="text-cv-gray-light text-[10px] tracking-widest uppercase">Años</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-cv-gray-light leading-relaxed font-light">
+                        <strong class="text-white font-medium">Técnico en sistemas y progamación,,</strong>  me desempeño en el área de la
+informática y programación, con conocimientos básicos y avanzado
+en el área de la informática. Me considero una persona proactiva,
+organizada, responsable capaz de resolver cualquier problema de
+manera creativa.
+                    </p>
+                </section>
+                <section class="proyectos personales">
+                    <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-lg">Proyectos Personales</h3>
+                    <ul class="space-y-4 text-xs text-cv-gray-light">
+                        <li>
+                            <h4 class="text-white font-semibold">Proyecto 1</h4>
+                            <p class="text-cv-gray-light">Descripción breve del proyecto 1.</p>
+                        </li>
+                </section>
+            </div>
+        </div>
+        <!-- END: Bottom Section -->
+    </main>
+    <!-- END: Main Content Area -->
+    <script src="cargar_componentes.js"></script>
+</body>
+
+</html>
