@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Portfolio - de Frank martinez Abbas</title>
+    <title>Portfolio - Frank David Martinez</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
         tailwind.config = {
@@ -26,27 +25,49 @@
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
     <link href="estilos.css" rel="stylesheet" />
+    <style>
+        /* Acordeón personalizado */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+            opacity: 0;
+        }
+
+        .accordion-content.active {
+            opacity: 1;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-icon.active {
+            transform: rotate(180deg);
+        }
+    </style>
 </head>
 
-<body class="antialiased min-h-screen relative">
-    <!-- BEGIN: Navigation Container -->
+<body class="antialiased min-h-screen relative bg-cv-bg">
+    <!-- Navigation Container -->
     <div id="contenedor-navegacion"></div>
-    <!-- END: Navigation Container -->
-    <!-- BEGIN: Background Image Layer -->
-    <div aria-hidden="true" class="main-image-container">
-        <img alt="Frank Martinez Portrait" class="main-image"
+
+    <!-- Background Image Layer -->
+    <div aria-hidden="true" class="main-image-container fixed inset-0 z-0">
+        <img alt="Frank Martinez Portrait" class="main-image w-full h-full object-cover"
             src="imagenes/WhatsApp%20Image%202026-05-26%20at%207.21.38%20PM-fotor-enhance-20260526193546.jpg" />
-        <div class="vignette"></div>
+        <div class="vignette absolute inset-0"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-cv-bg via-transparent to-cv-bg opacity-90"></div>
-        <div class="bottom-gradient"></div>
+        <div class="bottom-gradient absolute bottom-0 w-full h-32 bg-gradient-to-t from-cv-bg to-transparent"></div>
     </div>
-    <!-- END: Background Image Layer -->
-    <!-- BEGIN: Main Content Area -->
-    <main class="relative z-10 container mx-auto px-6 pt-24 pb-12 lg:pt-28 lg:pb-24 min-h-screen flex flex-col justify-between">
-        <!-- BEGIN: Header Section -->
+
+    <!-- Main Content Area -->
+    <main
+        class="relative z-10 container mx-auto px-6 pt-24 pb-12 lg:pt-28 lg:pb-24 min-h-screen flex flex-col justify-between">
+
+        <!-- Header Section -->
         <header class="text-center lg:text-left mb-16 relative z-20 pl-0 lg:pl-[15%]">
             <h1
                 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none mb-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
@@ -54,65 +75,69 @@
                     DAVID</span>
                 MARTINEZ
             </h1>
-            <h2 class="text-xl md:text-2xl font-bold tracking-widest text-cv-gray-light uppercase mt-4">
-                DESARROLLADOR DE SOFTWARE</h2>
+            <h2 class="text-xl md:text-2xl font-bold tracking-widest text-cv-gray-light uppercase mt-4">DESARROLLADOR DE
+                SOFTWARE</h2>
         </header>
-        <!-- END: Header Section -->
-        <!-- BEGIN: Grid Layout for Content -->
+
+        <!-- TITULO DE TRAYECTORIA -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-20">
-            <!-- Left Column -->
+
+            <!-- TARYECTORIA CREATIVA ESMPRESAS Y ROLES  -->
             <div class="lg:col-span-3 flex flex-col gap-8">
                 <!-- Creative Journey Panel -->
-                <section class="glass-panel p-6 shadow-2xl">
+                <section
+                    class="glass-panel p-6 shadow-2xl bg-cv-glass-bg border border-cv-glass-border backdrop-blur-md rounded-lg">
                     <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-sm">Trayectoria Creativa</h3>
                     <ul class="space-y-4 text-xs">
                         <li>
-                            <h4 class="text-white font-semibold">Arab Company</h4>
-                            <p class="text-cv-gray-light">Software Developer</p>
+                            <h4 class="text-white font-semibold">Restaurante Eccehomo</h4>
+                            <p class="text-cv-gray-light">Diseñador y desarrollador</p>
                         </li>
                         <li>
-                            <h4 class="text-white font-semibold">Print Gate</h4>
-                            <p class="text-cv-gray-light">Software Developer</p>
+                            <h4 class="text-white font-semibold">.</h4>
+                            <p class="text-cv-gray-light">.</p>
                         </li>
                         <li>
-                            <h4 class="text-white font-semibold">Business Print</h4>
-                            <p class="text-cv-gray-light">Software Developer</p>
+                            <h4 class="text-white font-semibold">.</h4>
+                            <p class="text-cv-gray-light">.</p>
                         </li>
                         <li>
-                            <h4 class="text-white font-semibold">4 COLOR</h4>
-                            <p class="text-cv-gray-light">Senior Software Developer</p>
+                            <h4 class="text-white font-semibold">.</h4>
+                            <p class="text-cv-gray-light">.</p>
                         </li>
                         <li>
-                            <h4 class="text-white font-semibold">Cubes</h4>
-                            <p class="text-cv-gray-light">Senior Software Developer</p>
+                            <h4 class="text-white font-semibold">.</h4>
+                            <p class="text-cv-gray-light">.</p>
                         </li>
                         <li>
-                            <h4 class="text-white font-semibold">Koiak</h4>
-                            <p class="text-cv-gray-light">Senior Software Developer</p>
+                            <h4 class="text-white font-semibold">.</h4>
+                            <p class="text-cv-gray-light">.</p>
                         </li>
                         <li>
-                            <h4 class="text-white font-semibold">Dynamics</h4>
-                            <p class="text-cv-gray-light">Tech Lead</p>
+                            <h4 class="text-white font-semibold">.</h4>
+                            <p class="text-cv-gray-light">.</p>
                         </li>
                         <li>
-                            <h4 class="text-white font-semibold">4 Brothers</h4>
-                            <p class="text-cv-gray-light">Tech Lead</p>
+                            <h4 class="text-white font-semibold">.</h4>
+                            <p class="text-cv-gray-light">.</p>
                         </li>
                         <li>
-                            <h4 class="text-white font-semibold">TMS</h4>
-                            <p class="text-cv-gray-light">Tech Lead</p>
+                            <h4 class="text-white font-semibold">.</h4>
+                            <p class="text-cv-gray-light">.</p>
                         </li>
                         <li class="pt-2">
-                            <h4 class="text-white font-bold">Instructor Full Stack Dev</h4>
+                            <h4 class="text-white font-bold">.</h4>
                         </li>
                     </ul>
                 </section>
             </div>
+
             <!-- Center Spacer (for portrait) -->
             <div class="lg:col-span-5 hidden lg:block"></div>
-            <!-- Right Column -->
+
+            <!-- HABILIDADES -->
             <div class="lg:col-span-4 flex flex-col justify-between gap-12">
-                <!-- Top Right: Education -->
+                <!-- Education -->
                 <section class="text-right pr-4 lg:pr-12 pt-8">
                     <h3 class="text-white font-bold text-xl uppercase tracking-wider mb-4">Educación</h3>
                     <ul class="space-y-2 text-xs text-cv-gray-light text-right flex flex-col items-end">
@@ -122,13 +147,14 @@
                         <li>- Técnico en sistemas</li>
                     </ul>
                 </section>
-                <!-- Middle Right: Skills -->
+
+                <!-- Skills -->
                 <section class="text-right pr-4 lg:pr-12">
                     <h3 class="text-cv-green font-bold text-sm mb-4">Nivel de Habilidades</h3>
                     <ul class="space-y-1.5 text-xs text-cv-gray-light font-medium flex flex-col items-end">
                         <li>Arquitectura de Software</li>
-                    <li>Git bash / GitHub</li>
-                    <li>docker</li>
+                        <li>Git bash / GitHub</li>
+                        <li>docker</li>
                         <li>Node.js / Express</li>
                         <li>Resolución de Problemas</li>
                         <li>Bases de Datos (SQL/NoSQL)</li>
@@ -139,21 +165,21 @@
                         <li>Desarrollo Ágil</li>
                         <li>Trabajo en Equipo</li>
                         <li>Estrategia de Código</li>
-                        <Li>liderazgo</li>
+                        <li>liderazgo</li>
                     </ul>
                 </section>
             </div>
         </div>
-        <!-- END: Grid Layout for Content -->
-        <!-- BEGIN: Bottom Section -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-12 relative z-20 pb-12">
+
+        <!-- Bottom Section: GitHub + Tools + Sobre Mi -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-20 mt-12 pb-8">
             <!-- Bottom Left: Clients & Links -->
             <div class="lg:col-span-4 flex flex-col gap-6">
                 <!-- Portfolio Link -->
                 <a class="flex items-center gap-4 group cursor-pointer hover:opacity-80 transition-opacity w-max"
                     href="https://github.com/Franko-Castro" rel="noopener noreferrer" target="_blank">
                     <div
-                        class="text-5xl font-bold text-white bg-black w-16 h-16 flex items-center justify-center rounded">
+                        class="text-5xl font-bold text-white bg-black w-16 h-16 flex items-center justify-center rounded border border-white/10">
                         GH
                     </div>
                     <div>
@@ -162,37 +188,43 @@
                         <p class="text-xs text-cv-gray-light mt-1">https://github.com/Franko-Castro</p>
                     </div>
                 </a>
-                <!-- Mega Clients Panel -->
-                <section class="glass-panel p-6 mt-4 max-w-sm">
+
+                <!-- Tools -->
+                <section
+                    class="glass-panel p-6 mt-4 max-w-sm bg-cv-glass-bg border border-cv-glass-border backdrop-blur-md rounded-lg">
                     <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-sm">Herramientas</h3>
-                    <div class="grid grid-cols-3 gap-6 items-center justify-items-center opacity-80 filter grayscale">
-                        <!-- Placeholders for client logos -->
-                        <img alt="Client Logo 1" class="h-8 object-contain"
+                    <div
+                        class="grid grid-cols-5 gap-4 items-center justify-items-center opacity-80 filter grayscale hover:grayscale-0 transition-all duration-500">
+                        <img alt="Docker" class="h-8 object-contain hover:scale-110 transition-transform"
                             src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/docker.svg" />
-                        <img alt="Client Logo 2" class="h-8 object-contain"
+                        <img alt="HTML" class="h-8 object-contain hover:scale-110 transition-transform"
                             src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/html-light.svg" />
-                        <img alt="Client Logo 3" class="h-8 object-contain"
+                        <img alt="CSS" class="h-8 object-contain hover:scale-110 transition-transform"
                             src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/css-light.svg" />
-                        <img alt="Client Logo 4" class="h-6 object-contain"
+                        <img alt="PHP" class="h-6 object-contain hover:scale-110 transition-transform"
                             src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/php-light.svg" />
-                        <img alt="Client Logo 5" class="h-6 object-contain"
+                        <img alt="JavaScript" class="h-6 object-contain hover:scale-110 transition-transform"
                             src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/javascript-light.svg" />
-                        <img alt="Client Logo 6" class="h-8 object-contain"
+                        <img alt="MySQL" class="h-8 object-contain hover:scale-110 transition-transform"
                             src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/mysql.svg" />
-                        <img alt="Client Logo 7" class="h-6 object-contain"
+                        <img alt="Flutter" class="h-6 object-contain hover:scale-110 transition-transform"
                             src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/flutter.svg" />
-                        <img alt="Client Logo 8" class="h-8 object-contain"
+                        <img alt="Supabase" class="h-8 object-contain hover:scale-110 transition-transform"
                             src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/supabase.svg" />
-                        <img alt="Client Logo 9" class="h-10 object-contain"
+                        <img alt="Python" class="h-10 object-contain hover:scale-110 transition-transform"
                             src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/python.svg" />
+                        <img alt="Figma" class="h-8 object-contain hover:scale-110 transition-transform"
+                            src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/figma.svg" />
                     </div>
                 </section>
             </div>
+
             <!-- Bottom Center Spacer -->
             <div class="lg:col-span-2 hidden lg:block"></div>
-            <!-- Bottom Right: Creative DNA -->
+
+            <!-- Bottom Right: About Me -->
             <div class="lg:col-span-6 flex items-end justify-end mt-8 lg:mt-0">
-                <section class="glass-panel p-8 max-w-xl border border-white/10 bg-white/5 backdrop-blur-md">
+                <section class="glass-panel p-8 max-w-xl border border-white/10 bg-white/5 backdrop-blur-md rounded-lg">
                     <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-lg">SOBRE MI</h3>
                     <div class="flex gap-8 mb-6">
                         <div>
@@ -205,26 +237,389 @@
                         </div>
                     </div>
                     <p class="text-sm text-cv-gray-light leading-relaxed font-light">
-                        <strong class="text-white font-medium">Técnico en sistemas y progamación,,</strong>  me desempeño en el área de la
-informática y programación, con conocimientos básicos y avanzado
-en el área de la informática. Me considero una persona proactiva,
-organizada, responsable capaz de resolver cualquier problema de
-manera creativa.
+                        <strong class="text-white font-medium">Técnico en sistemas y programación,</strong> me desempeño
+                        en el área de la informática y programación, con conocimientos básicos y avanzados
+                        en el área de la informática. Me considero una persona proactiva,
+                        organizada, responsable capaz de resolver cualquier problema de
+                        manera creativa.
                     </p>
-                </section>
-                <section class="proyectos personales">
-                    <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-lg">Proyectos Personales</h3>
-                    <ul class="space-y-4 text-xs text-cv-gray-light">
-                        <li>
-                            <h4 class="text-white font-semibold">Proyecto 1</h4>
-                            <p class="text-cv-gray-light">Descripción breve del proyecto 1.</p>
-                        </li>
                 </section>
             </div>
         </div>
-        <!-- END: Bottom Section -->
+
+
+        <!-- PROYECTOS PERSONALES - ANCHO COMPLETO -->
+
+        <div class="relative z-20 w-full mt-8">
+            <section class="glass-panel p-8 bg-cv-glass-bg border border-cv-glass-border backdrop-blur-md rounded-lg">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-cv-green font-bold uppercase tracking-wider text-lg flex items-center gap-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                            </path>
+                        </svg>
+                        Proyectos Personales
+                    </h3>
+                    <span class="text-cv-gray-light text-xs uppercase tracking-widest">Portfolio</span>
+                </div>
+
+                <!-- Grid de proyectos en acordeón -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                    <!-- ═══════════════════════════════════════ -->
+                    <!-- PROYECTO 1: MIS COMPRAS (YA EXISTENTE) -->
+                    <!-- ═══════════════════════════════════════ -->
+                    <div
+                        class="border border-white/10 rounded-lg overflow-hidden bg-cv-gray-dark/20 hover:border-cv-green/30 transition-colors">
+                        <button onclick="toggleAccordion('project1')"
+                            class="w-full flex items-center justify-between p-5 hover:bg-cv-gray-dark/40 transition-colors text-left group">
+                            <div class="flex items-center gap-4">
+                                <!-- LOGO DEL PROYECTO -->
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-cv-gray-dark/50 flex items-center justify-center overflow-hidden border border-white/10 group-hover:border-cv-green/50 transition-colors">
+                                    <img src="img de logos del proyecto/logo.png" alt="Logo Mis Compras"
+                                        class="w-10 h-10 object-contain"
+                                        onerror="this.style.display='none'; this.parentElement.innerHTML='<svg class=\'w-6 h-6 text-cv-green\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'1.5\' d=\'M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z\'></path></svg>';">
+                                </div>
+                                <div>
+                                    <h4
+                                        class="text-white font-bold text-base group-hover:text-cv-green transition-colors">
+                                        Mis Compras</h4>
+                                    <span class="text-[10px] text-cv-gray-light uppercase tracking-wider">Full Stack •
+                                        En producción</span>
+                                </div>
+                            </div>
+                            <svg id="icon-project1" class="accordion-icon w-5 h-5 text-cv-gray-light" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <div id="project1" class="accordion-content">
+                            <div class="p-5 border-t border-white/10">
+                                <p class="text-cv-gray-light text-sm leading-relaxed mb-4">
+                                    Sitio web para publicacion de productos, y de compras en linea, con una interfaz
+                                    intuitiva y fácil de usar. Permite a los usuarios crear y gestionar sus listas de
+                                    compras, agregar productos con detalles como nombre, cantidad y precio, y marcar los
+                                    artículos como comprados. Además, ofrece la posibilidad de organizar las compras por
+                                    categorías y calcular automáticamente el total de gastos.
+                                </p>
+
+                                <!-- Features -->
+                                <div class="mb-4 space-y-2">
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Perfiles de usuario con autenticación y autorización
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        crecion y resgistro de usuarios
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        resgistrio de productos con detalles como nombre, cantidad y precio
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Cálculo automático de totales y precios en tiempo real
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Historial completo de compras realizadas y de pedidos
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        panel de administracion para gestionar productos, usuarios y pedidos
+                                    </div>
+                                </div>
+
+                                <!-- Tech Stack -->
+                                <div class="flex flex-wrap gap-2 mb-5">
+                                    <span
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">HTML5</span>
+                                    <span
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">CSS</span>
+                                    <span
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">JavaScript</span>
+                                    <span
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">PHP</span>
+                                </div>
+
+                                <!-- Actions -->
+                                <div class="flex items-center gap-4 pt-4 border-t border-white/10">
+                                    <a href="https://github.com/Franko-Castro/mis-compras" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-sm text-white hover:text-cv-green transition-colors flex items-center gap-2">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
+                                        Código
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer"
+                                        class="text-sm text-cv-green hover:text-white transition-colors flex items-center gap-1">
+                                        Demo en vivo
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- PROYECTO 2:-->
+
+                    <div
+                        class="border border-white/10 rounded-lg overflow-hidden bg-cv-gray-dark/20 hover:border-cv-green/30 transition-colors">
+                        <button onclick="toggleAccordion('project2')"
+                            class="w-full flex items-center justify-between p-5 hover:bg-cv-gray-dark/40 transition-colors text-left group">
+                            <div class="flex items-center gap-4">
+                                <!-- LOGO DEL PROYECTO 2 -->
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-cv-gray-dark/50 flex items-center justify-center overflow-hidden border border-white/10 group-hover:border-cv-green/50 transition-colors">
+                                    <!-- Cambia 'logo-proyecto-2.png' por tu imagen real -->
+                                    <img src="img de logos del proyecto/logo.png" alt="Logo Proyecto 2"
+                                        class="w-10 h-10 object-contain"
+                                        onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-lg font-bold text-cv-green\'>P2</span>';">
+                                </div>
+                                <div>
+                                    <h4
+                                        class="text-white font-bold text-base group-hover:text-cv-green transition-colors">
+                                        Mis compras App</h4>
+                                    <span class="text-[10px] text-cv-gray-light uppercase tracking-wider">Backend • En
+                                        desarrollo</span>
+                                </div>
+                            </div>
+                            <svg id="icon-project2" class="accordion-icon w-5 h-5 text-cv-gray-light" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <div id="project2" class="accordion-content">
+                            <div class="p-5 border-t border-white/10">
+                                <p class="text-cv-gray-light text-sm leading-relaxed mb-4">
+                                    Mis Compras es una aplicación móvil diseñada para conectar compradores y vendedores
+                                    locales en una plataforma moderna, intuitiva y fácil de usar.
+
+                                    La aplicación permite explorar productos por categorías, buscar artículos
+                                    específicos, visualizar detalles completos de cada producto,
+                                    consultar reseñas de otros usuarios y contactar directamente con los vendedores.
+                                    Además, cada usuario dispone de un perfil personalizado donde puede gestionar su
+                                    información, productos publicados y actividad dentro de la plataforma.
+                                </p>
+
+                                <!-- Features -->
+                                <div class="mb-4 space-y-2">
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Característica principal del proyecto
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Catálogo de productos organizado por categorías.
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Visualización detallada de productos e imágenes.
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Sistema de reseñas y calificaciones.
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Perfiles de usuario con gestión de información y productos.
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Comunicación directa entre compradores y vendedores.
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Interfaz moderna optimizada para dispositivos móviles.
+                                    </div>
+
+                                </div>
+
+                                <!-- Tech Stack -->
+                                <div class="flex flex-wrap gap-2 mb-5">
+                                    <span
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">Node.js</span>
+                                    <span
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">Express</span>
+                                    <span
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">MongoDB</span>
+                                    <span
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">Docker</span>
+                                </div>
+
+                                <!-- Actions -->
+                                <div class="flex items-center gap-4 pt-4 border-t border-white/10">
+                                    <a href="https://github.com/Franko-Castro/mis_compras_app" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-sm text-white hover:text-cv-green transition-colors flex items-center gap-2">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
+                                        Código
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer"
+                                        class="text-sm text-cv-green hover:text-white transition-colors flex items-center gap-1">
+                                        Demo en vivo
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- PROYECTO 3: -->
+                 
+                    <div
+                        class="border border-white/10 rounded-lg overflow-hidden bg-cv-gray-dark/20 hover:border-cv-green/30 transition-colors">
+                        <button onclick="toggleAccordion('project3')"
+                            class="w-full flex items-center justify-between p-5 hover:bg-cv-gray-dark/40 transition-colors text-left group">
+                            <div class="flex items-center gap-4">
+                                <!-- LOGO DEL PROYECTO 3 -->
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-cv-gray-dark/50 flex items-center justify-center overflow-hidden border border-white/10 group-hover:border-cv-green/50 transition-colors">
+                                    <!-- Cambia 'logo-proyecto-3.png' por tu imagen real -->
+                                    <img src="img de logos del proyecto/logo-proyecto-3.png" alt="Logo Proyecto 3"
+                                        class="w-10 h-10 object-contain"
+                                        onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-lg font-bold text-cv-green\'>P3</span>';">
+                                </div>
+                                <div>
+                                    <h4
+                                        class="text-white font-bold text-base group-hover:text-cv-green transition-colors">
+                                        Nombre Proyecto 3</h4>
+                                    <span class="text-[10px] text-cv-gray-light uppercase tracking-wider">Mobile • En
+                                        planificación</span>
+                                </div>
+                            </div>
+                            <svg id="icon-project3" class="accordion-icon w-5 h-5 text-cv-gray-light" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <div id="project3" class="accordion-content">
+                            <div class="p-5 border-t border-white/10">
+                                <p class="text-cv-gray-light text-sm leading-relaxed mb-4">
+                                    Descripción de tu tercer proyecto. Explica qué problema resuelve, para qué sirve y
+                                    qué lo hace especial.
+                                </p>
+
+                                <!-- Features -->
+                                <div class="mb-4 space-y-2">
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Característica principal del proyecto
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Otra funcionalidad destacada
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Algo más que quieras resaltar
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
+                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
+                                        Y otra característica más
+                                    </div>
+                                </div>
+
+                                <!-- Tech Stack -->
+                                <div class="flex flex-wrap gap-2 mb-5">
+                                    <span
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">Flutter</span>
+                                    <span
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">Dart</span>
+                                    <span
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">Supabase</span>
+                                    <span
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">Firebase</span>
+                                </div>
+
+                                <!-- Actions -->
+                                <div class="flex items-center gap-4 pt-4 border-t border-white/10">
+                                    <a href="https://github.com/Franko-Castro" target="_blank" rel="noopener noreferrer"
+                                        class="text-sm text-white hover:text-cv-green transition-colors flex items-center gap-2">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
+                                        Código
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer"
+                                        class="text-sm text-cv-green hover:text-white transition-colors flex items-center gap-1">
+                                        Demo en vivo
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
     </main>
-    <!-- END: Main Content Area -->
+
+    <!-- Script del Acordeón -->
+    <script>
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+
+            // Cerrar todos los demás acordeones (modo "solo uno abierto")
+            const allContents = document.querySelectorAll('.accordion-content');
+            const allIcons = document.querySelectorAll('.accordion-icon');
+
+            allContents.forEach((item) => {
+                if (item.id !== id && item.style.maxHeight) {
+                    item.style.maxHeight = null;
+                    item.classList.remove('active');
+                }
+            });
+            allIcons.forEach((item) => {
+                if (item.id !== 'icon-' + id && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Toggle el acordeón clickeado
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                content.classList.remove('active');
+                icon.classList.remove('active');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.classList.add('active');
+                icon.classList.add('active');
+            }
+        }
+    </script>
+
     <script src="cargar_componentes.js"></script>
 </body>
 
