@@ -156,9 +156,9 @@ function inicializarBuscador() {
     });
 }
 
-// ============================================
+
 // CARGAR TODOS LOS COMPONENTES AL INICIAR
-// ============================================
+
 async function cargarTodosLosComponentes() {
     await Promise.all([
         cargarComponente('contenedor-navegacion', 'navegacion.html'),
@@ -173,3 +173,39 @@ async function cargarTodosLosComponentes() {
 
 // Iniciar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', cargarTodosLosComponentes);
+
+ // Script del Acordeón para los proyectos
+    
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            // Cerrar todos los demás acordeones (modo "solo uno abierto")
+            const allContents = document.querySelectorAll('.accordion-content');
+            const allIcons = document.querySelectorAll('.accordion-icon');
+            
+            allContents.forEach((item) => {
+                if (item.id !== id && item.style.maxHeight) {
+                    item.style.maxHeight = null;
+                    item.classList.remove('active');
+                }
+            });
+            allIcons.forEach((item) => {
+                if (item.id !== 'icon-' + id && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle el acordeón clickeado
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                content.classList.remove('active');
+                icon.classList.remove('active');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.classList.add('active');
+                icon.classList.add('active');
+            }
+        }
+    
+    
