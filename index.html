@@ -26,6 +26,8 @@
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
     <link href="estilos.css" rel="stylesheet" />
     <style>
         /* Acordeón personalizado */
@@ -47,7 +49,17 @@
         .accordion-icon.active {
             transform: rotate(180deg);
         }
+
+        /* Material Symbols sizing */
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+        }
     </style>
+<base target="_blank">
 </head>
 
 <body class="antialiased min-h-screen relative bg-cv-bg">
@@ -82,9 +94,10 @@
         <!-- TITULO DE TRAYECTORIA -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-20">
 
-            <!-- TARYECTORIA CREATIVA ESMPRESAS Y ROLES  -->
+            <!-- COLUMNA IZQUIERDA: Trayectoria + Contacto -->
             <div class="lg:col-span-3 flex flex-col gap-8">
-                <!-- Creative Journey Panel -->
+
+                <!-- Trayectoria Creativa -->
                 <section
                     class="glass-panel p-6 shadow-2xl bg-cv-glass-bg border border-cv-glass-border backdrop-blur-md rounded-lg">
                     <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-sm">Trayectoria Creativa</h3>
@@ -95,7 +108,7 @@
                         </li>
                         <li>
                             <h4 class="text-white font-semibold">DÚOCCOLATO</h4>
-                            <p class="text-cv-gray-light">diseñador web</p>
+                            <p class="text-cv-gray-light">Diseñador web</p>
                         </li>
                         <li>
                             <h4 class="text-white font-semibold">.</h4>
@@ -130,13 +143,77 @@
                         </li>
                     </ul>
                 </section>
+
+                <!-- ═══════════════════════════════════════ -->
+                <!-- NUEVA SECCIÓN: CONTACTO -->
+                <!-- ═══════════════════════════════════════ -->
+                <section class="glass-panel p-6 shadow-2xl bg-cv-glass-bg border border-cv-glass-border backdrop-blur-md rounded-lg">
+                    <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-sm flex items-center gap-2">
+                        <span class="material-symbols-outlined text-lg">contact_mail</span>
+                        Contacto
+                    </h3>
+
+                    <ul class="space-y-4 text-xs">
+                        <!-- Email -->
+                        <li class="flex items-center gap-3 group">
+                            <div class="w-10 h-10 rounded-lg bg-cv-green/10 flex items-center justify-center group-hover:bg-cv-green/20 transition-colors flex-shrink-0">
+                                <span class="material-symbols-outlined text-cv-green text-lg">mail</span>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-cv-gray-light uppercase text-[9px] tracking-widest">Email</p>
+                                <p class="text-white font-medium text-xs truncate hover:text-cv-green transition-colors cursor-pointer">fm3949461@gmail.com</p>
+                            </div>
+                        </li>
+
+                        <!-- WhatsApp -->
+                        <li class="flex items-center gap-3 group">
+                            <div class="w-10 h-10 rounded-lg bg-cv-green/10 flex items-center justify-center group-hover:bg-cv-green/20 transition-colors flex-shrink-0">
+                                <span class="material-symbols-outlined text-cv-green text-lg">chat</span>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-cv-gray-light uppercase text-[9px] tracking-widest">WhatsApp</p>
+                                <p class="text-white font-medium text-xs truncate hover:text-cv-green transition-colors cursor-pointer">+57 3226065720</p>
+                            </div>
+                        </li>
+
+                        <!-- Teléfono -->
+                        <li class="flex items-center gap-3 group">
+                            <div class="w-10 h-10 rounded-lg bg-cv-green/10 flex items-center justify-center group-hover:bg-cv-green/20 transition-colors flex-shrink-0">
+                                <span class="material-symbols-outlined text-cv-green text-lg">call</span>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-cv-gray-light uppercase text-[9px] tracking-widest">Teléfono</p>
+                                <p class="text-white font-medium text-xs truncate hover:text-cv-green transition-colors cursor-pointer">+57 3226065720</p>
+                            </div>
+                        </li>
+
+                        <!-- Ubicación -->
+                        <li class="flex items-center gap-3 group">
+                            <div class="w-10 h-10 rounded-lg bg-cv-green/10 flex items-center justify-center group-hover:bg-cv-green/20 transition-colors flex-shrink-0">
+                                <span class="material-symbols-outlined text-cv-green text-lg">location_on</span>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-cv-gray-light uppercase text-[9px] tracking-widest">Ubicación</p>
+                                <p class="text-white font-medium text-xs truncate">Colombia</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- CTA -->
+                    <div class="mt-4 pt-4 border-t border-white/10 text-center">
+                        <p class="text-cv-gray-light text-[10px] leading-relaxed">
+                            ¿Tienes un proyecto en mente?
+                            <span class="text-cv-green font-medium block mt-1">¡Hablemos!</span>
+                        </p>
+                    </div>
+                </section>
             </div>
 
             <!-- Center Spacer (for portrait) -->
             <div class="lg:col-span-5 hidden lg:block"></div>
 
-            <!-- HABILIDADES -->
-            <div class="lg:col-span-4 flex flex-col justify-between gap-12">
+            <!-- COLUMNA DERECHA: Educación + Habilidades + Pasiones -->
+            <div class="lg:col-span-4 flex flex-col gap-8">
                 <!-- Education -->
                 <section class="text-right pr-4 lg:pr-12 pt-8">
                     <h3 class="text-white font-bold text-xl uppercase tracking-wider mb-4">Educación</h3>
@@ -168,8 +245,58 @@
                         <li>liderazgo</li>
                     </ul>
                 </section>
-            </div>
-        </div>
+
+                
+                <!-- SECCIÓN: PASIONES  -->
+                
+                <section class="glass-panel p-6 shadow-2xl bg-cv-glass-bg border border-cv-glass-border backdrop-blur-md rounded-lg">
+                    <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-sm flex items-center gap-2 justify-end">
+                        Pasiones
+                        <span class="material-symbols-outlined text-lg">favorite</span>
+                    </h3>
+
+                    <!-- Grid 2x2 con separadores -->
+                    <div class="grid grid-cols-2 gap-0 relative">
+                        <!-- Separador vertical central -->
+                        <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent -translate-x-1/2"></div>
+                        <!-- Separador horizontal central -->
+                        <div class="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-y-1/2"></div>
+
+                        <!-- Dibujo -->
+                        <div class="flex flex-col items-center gap-2 py-5 group cursor-default hover:bg-white/5 transition-colors rounded-tl-lg">
+                            <span class="material-symbols-outlined text-2xl text-cv-green group-hover:scale-110 transition-transform">palette</span>
+                            <span class="text-white text-[10px] font-medium uppercase tracking-wider">Dibujo</span>
+                        </div>
+
+                        <!-- Fotografía -->
+                        <div class="flex flex-col items-center gap-2 py-5 group cursor-default hover:bg-white/5 transition-colors rounded-tr-lg">
+                            <span class="material-symbols-outlined text-2xl text-cv-green group-hover:scale-110 transition-transform">photo_camera</span>
+                            <span class="text-white text-[10px] font-medium uppercase tracking-wider">Fotografía</span>
+                        </div>
+
+                        <!-- Gaming -->
+                        <div class="flex flex-col items-center gap-2 py-5 group cursor-default hover:bg-white/5 transition-colors rounded-bl-lg">
+                            <span class="material-symbols-outlined text-2xl text-cv-green group-hover:scale-110 transition-transform">sports_esports</span>
+                            <span class="text-white text-[10px] font-medium uppercase tracking-wider">Gaming</span>
+                        </div>
+
+                        <!-- Naturaleza -->
+                        <div class="flex flex-col items-center gap-2 py-5 group cursor-default hover:bg-white/5 transition-colors rounded-br-lg">
+                            <span class="material-symbols-outlined text-2xl text-cv-green group-hover:scale-110 transition-transform">potted_plant</span>
+                            <span class="text-white text-[10px] font-medium uppercase tracking-wider">Naturaleza</span>
+                        </div>
+                    </div>
+
+                    <!-- Mensaje -->
+                    <div class="mt-4 pt-4 border-t border-white/10 text-center">
+                        <p class="text-cv-gray-light text-[10px] leading-relaxed italic">
+                            "Siempre aprendiendo, siempre creando."
+                        </p>
+                    </div>
+                </section>
+            </div> <!-- FIN COLUMNA DERECHA -->
+        </div> <!-- FIN GRID PRINCIPAL -->
+
 
         <!-- Bottom Section: GitHub + Tools + Sobre Mi -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-20 mt-12 pb-8">
@@ -315,11 +442,11 @@
                                     </div>
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        crecion y resgistro de usuarios
+                                        Creación y registro de usuarios
                                     </div>
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        resgistrio de productos con detalles como nombre, cantidad y precio
+                                        Registro de productos con detalles como nombre, cantidad y precio
                                     </div>
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
@@ -331,7 +458,7 @@
                                     </div>
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        panel de administracion para gestionar productos, usuarios y pedidos
+                                        Panel de administración para gestionar productos, usuarios y pedidos
                                     </div>
                                 </div>
 
@@ -345,12 +472,11 @@
                                         class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">JavaScript</span>
                                     <span
                                         class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">PHP</span>
-                                <span
+                                    <span
                                         class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">MySQL</span>
-                                <span
+                                    <span
                                         class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">Docker</span>
                                 </div>
-
 
                                 <!-- Actions -->
                                 <div class="flex items-center gap-4 pt-4 border-t border-white/10">
@@ -378,7 +504,7 @@
                     </div>
 
 
-                    <!-- PROYECTO 2:-->
+                    <!-- PROYECTO 2: MIS COMPRAS APP -->
 
                     <div
                         class="border border-white/10 rounded-lg overflow-hidden bg-cv-gray-dark/20 hover:border-cv-green/30 transition-colors">
@@ -388,7 +514,6 @@
                                 <!-- LOGO DEL PROYECTO 2 -->
                                 <div
                                     class="w-12 h-12 rounded-lg bg-cv-gray-dark/50 flex items-center justify-center overflow-hidden border border-white/10 group-hover:border-cv-green/50 transition-colors">
-                                    <!-- Cambia 'logo-proyecto-2.png' por tu imagen real -->
                                     <img src="img de logos del proyecto/logo.png" alt="Logo Proyecto 2"
                                         class="w-10 h-10 object-contain"
                                         onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-lg font-bold text-cv-green\'>P2</span>';">
@@ -396,7 +521,7 @@
                                 <div>
                                     <h4
                                         class="text-white font-bold text-base group-hover:text-cv-green transition-colors">
-                                        Mis compras App</h4>
+                                        Mis Compras App</h4>
                                     <span class="text-[10px] text-cv-gray-light uppercase tracking-wider">Backend • En
                                         desarrollo</span>
                                 </div>
@@ -411,10 +536,9 @@
                         <div id="project2" class="accordion-content">
                             <div class="p-5 border-t border-white/10">
                                 <p class="text-cv-gray-light text-sm leading-relaxed mb-4">
-                                    Mis Compras es una aplicación móvil diseñada para conectar compradores y vendedores
+                                    Aplicación móvil diseñada para conectar compradores y vendedores
                                     locales en una plataforma moderna, intuitiva y fácil de usar.
-
-                                    La aplicación permite explorar productos por categorías, buscar artículos
+                                    Permite explorar productos por categorías, buscar artículos
                                     específicos, visualizar detalles completos de cada producto,
                                     consultar reseñas de otros usuarios y contactar directamente con los vendedores.
                                     Además, cada usuario dispone de un perfil personalizado donde puede gestionar su
@@ -425,47 +549,42 @@
                                 <div class="mb-4 space-y-2">
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        Característica principal del proyecto
+                                        Catálogo de productos organizado por categorías
                                     </div>
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        Catálogo de productos organizado por categorías.
+                                        Visualización detallada de productos e imágenes
                                     </div>
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        Visualización detallada de productos e imágenes.
+                                        Sistema de reseñas y calificaciones
                                     </div>
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        Sistema de reseñas y calificaciones.
+                                        Perfiles de usuario con gestión de información y productos
                                     </div>
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        Perfiles de usuario con gestión de información y productos.
+                                        Comunicación directa entre compradores y vendedores
                                     </div>
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        Comunicación directa entre compradores y vendedores.
+                                        Interfaz moderna optimizada para dispositivos móviles
                                     </div>
-                                    <div class="flex items-center gap-2 text-xs text-cv-gray-light">
-                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        Interfaz moderna optimizada para dispositivos móviles.
-                                    </div>
-
                                 </div>
 
                                 <!-- Tech Stack -->
                                 <div class="flex flex-wrap gap-2 mb-5">
                                     <span
-                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">Dar</span>
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">Dart</span>
                                     <span
                                         class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">MySQL</span>
                                     <span
                                         class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">Flutter</span>
                                     <span
                                         class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">Docker</span>
-                                <span
-                                class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">PHP</span>
+                                    <span
+                                        class="text-[11px] text-cv-green border border-cv-green/30 px-2.5 py-1 rounded bg-cv-green/5">PHP</span>
                                 </div>
 
                                 <!-- Actions -->
@@ -494,7 +613,7 @@
                     </div>
 
 
-                    <!-- PROYECTO 3: -->
+                    <!-- PROYECTO 3: ECCEHOMO -->
 
                     <div
                         class="border border-white/10 rounded-lg overflow-hidden bg-cv-gray-dark/20 hover:border-cv-green/30 transition-colors">
@@ -504,7 +623,6 @@
                                 <!-- LOGO DEL PROYECTO 3 -->
                                 <div
                                     class="w-12 h-12 rounded-lg bg-cv-gray-dark/50 flex items-center justify-center overflow-hidden border border-white/10 group-hover:border-cv-green/50 transition-colors">
-                                    <!-- Cambia 'logo-proyecto-3.png' por tu imagen real -->
                                     <img src="img de logos del proyecto/logo del eccehomo.png" alt="Logo Proyecto 3"
                                         class="w-10 h-10 object-contain"
                                         onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-lg font-bold text-cv-green\'>P3</span>';">
@@ -513,8 +631,8 @@
                                     <h4
                                         class="text-white font-bold text-base group-hover:text-cv-green transition-colors">
                                         Eccehomo</h4>
-                                    <span class="text-[10px] text-cv-gray-light uppercase tracking-wider">Mobile • En
-                                        planificación</span>
+                                    <span class="text-[10px] text-cv-gray-light uppercase tracking-wider">Web • En
+                                        producción</span>
                                 </div>
                             </div>
                             <svg id="icon-project3" class="accordion-icon w-5 h-5 text-cv-gray-light" fill="none"
@@ -527,44 +645,34 @@
                         <div id="project3" class="accordion-content">
                             <div class="p-5 border-t border-white/10">
                                 <p class="text-cv-gray-light text-sm leading-relaxed mb-4">
-                                    Eccehomo Asadero y Restaurante es una plataforma web diseñada para presentar de
-                                    manera profesional la oferta gastronómica, turística y de hospedaje del
-                                    establecimiento. La landing page tiene como objetivo brindar a los visitantes una
-                                    experiencia visual atractiva, permitiéndoles conocer los servicios, especialidades
-                                    culinarias, instalaciones y opciones de reserva disponibles desde cualquier
-                                    dispositivo.
-
-                                    El sitio está desarrollado con tecnologías web modernas (HTML, CSS y JavaScript),
-                                    ofreciendo una interfaz responsiva, rápida y optimizada para mejorar la experiencia
-                                    del usuario y fortalecer la presencia digital del restaurante.
+                                    Plataforma web diseñada para presentar de manera profesional la oferta gastronómica, 
+                                    turística y de hospedaje del establecimiento. La landing page brinda a los visitantes 
+                                    una experiencia visual atractiva, permitiéndoles conocer los servicios, especialidades 
+                                    culinarias, instalaciones y opciones de reserva disponibles desde cualquier dispositivo.
                                 </p>
 
                                 <!-- Features -->
                                 <div class="mb-4 space-y-2">
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        Característica principal del proyecto
+                                        Experiencia de Usuario (UX) optimizada
                                     </div>
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        Experiencia de Usuario (UX)
+                                        Gestión de Contenido dinámico
                                     </div>
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                       Gestión de Contenido
+                                        Sistema de Reservas integrado
                                     </div>
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        Sistema de Reservas
+                                        Integraciones Externas
                                     </div>
                                     <div class="flex items-center gap-2 text-xs text-cv-gray-light">
                                         <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                       Integraciones Externas
+                                        Diseño Responsivo para todos los dispositivos
                                     </div>
-                                        <div class="flex items-center gap-2 text-xs text-cv-gray-light">
-                                        <span class="w-1.5 h-1.5 bg-cv-green rounded-full flex-shrink-0"></span>
-                                        Diseño Responsivo
-                                        </div>
                                 </div>
 
                                 <!-- Tech Stack -->
@@ -589,7 +697,7 @@
                                         </svg>
                                         Código
                                     </a>
-                                    <a href=" https://franko-castro.github.io/ECCEHOMO/" target="_blank" rel="noopener noreferrer"
+                                    <a href="https://franko-castro.github.io/ECCEHOMO/" target="_blank" rel="noopener noreferrer"
                                         class="text-sm text-cv-green hover:text-white transition-colors flex items-center gap-1">
                                         Demo en vivo
                                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
