@@ -30,6 +30,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
     <link href="estilos.css" rel="stylesheet" />
     <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Compensa la altura del menú fijo */
+        }
+
         /* Acordeón personalizado */
         .accordion-content {
             max-height: 0;
@@ -58,13 +63,77 @@
                 'GRAD' 0,
                 'opsz' 24;
         }
+
+        /* Nav link hover underline */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #39ff14;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
     </style>
-<base target="_blank">
 </head>
 
 <body class="antialiased min-h-screen relative bg-cv-bg">
-    <!-- Navigation Container -->
-    <div id="contenedor-navegacion"></div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- NAVEGACIÓN FUNCIONAL -->
+    <!-- ═══════════════════════════════════════ -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-cv-bg/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo / Nombre -->
+            <a href="#inicio" class="text-white font-bold text-lg tracking-widest uppercase hover:text-cv-green transition-colors">
+                Frank<span class="text-cv-green">.</span>Dev
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center gap-8">
+                <li><a href="#inicio" class="nav-link text-xs font-semibold uppercase tracking-widest text-cv-gray-light hover:text-white transition-colors">Inicio</a></li>
+                <li><a href="#trayectoria" class="nav-link text-xs font-semibold uppercase tracking-widest text-cv-gray-light hover:text-white transition-colors">Trayectoria</a></li>
+                <li><a href="#habilidades" class="nav-link text-xs font-semibold uppercase tracking-widest text-cv-gray-light hover:text-white transition-colors">Habilidades</a></li>
+                <li><a href="#proyectos" class="nav-link text-xs font-semibold uppercase tracking-widest text-cv-gray-light hover:text-white transition-colors">Proyectos</a></li>
+                <li><a href="#sobre-mi" class="nav-link text-xs font-semibold uppercase tracking-widest text-cv-gray-light hover:text-white transition-colors">Sobre Mí</a></li>
+                <li><a href="#contacto" class="nav-link text-xs font-semibold uppercase tracking-widest text-cv-gray-light hover:text-white transition-colors">Contacto</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-cv-bg border-l border-white/10 backdrop-blur-xl md:hidden z-50 p-6 flex flex-col gap-6">
+            <button id="close-menu" class="text-white self-end mb-4">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+            <a href="#inicio" class="mobile-link text-sm font-semibold uppercase tracking-widest text-cv-gray-light hover:text-cv-green transition-colors">Inicio</a>
+            <a href="#trayectoria" class="mobile-link text-sm font-semibold uppercase tracking-widest text-cv-gray-light hover:text-cv-green transition-colors">Trayectoria</a>
+            <a href="#habilidades" class="mobile-link text-sm font-semibold uppercase tracking-widest text-cv-gray-light hover:text-cv-green transition-colors">Habilidades</a>
+            <a href="#proyectos" class="mobile-link text-sm font-semibold uppercase tracking-widest text-cv-gray-light hover:text-cv-green transition-colors">Proyectos</a>
+            <a href="#sobre-mi" class="mobile-link text-sm font-semibold uppercase tracking-widest text-cv-gray-light hover:text-cv-green transition-colors">Sobre Mí</a>
+            <a href="#contacto" class="mobile-link text-sm font-semibold uppercase tracking-widest text-cv-gray-light hover:text-cv-green transition-colors">Contacto</a>
+        </div>
+    </nav>
 
     <!-- Background Image Layer -->
     <div aria-hidden="true" class="main-image-container fixed inset-0 z-0">
@@ -80,7 +149,7 @@
         class="relative z-10 container mx-auto px-6 pt-24 pb-12 lg:pt-28 lg:pb-24 min-h-screen flex flex-col justify-between">
 
         <!-- Header Section -->
-        <header class="text-center lg:text-left mb-16 relative z-20 pl-0 lg:pl-[15%]">
+        <header id="inicio" class="text-center lg:text-left mb-16 relative z-20 pl-0 lg:pl-[15%]">
             <h1
                 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none mb-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
                 <span class="block text-4xl md:text-6xl lg:text-7xl font-light tracking-widest text-white mb-2">FRANK
@@ -95,7 +164,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-20">
 
             <!-- COLUMNA IZQUIERDA: Trayectoria + Contacto -->
-            <div class="lg:col-span-3 flex flex-col gap-8">
+            <div id="trayectoria" class="lg:col-span-3 flex flex-col gap-8 scroll-mt-24">
 
                 <!-- Trayectoria Creativa -->
                 <section
@@ -147,7 +216,7 @@
                 <!-- ═══════════════════════════════════════ -->
                 <!-- NUEVA SECCIÓN: CONTACTO -->
                 <!-- ═══════════════════════════════════════ -->
-                <section class="glass-panel p-6 shadow-2xl bg-cv-glass-bg border border-cv-glass-border backdrop-blur-md rounded-lg">
+                <section id="contacto" class="glass-panel p-6 shadow-2xl bg-cv-glass-bg border border-cv-glass-border backdrop-blur-md rounded-lg scroll-mt-24">
                     <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-sm flex items-center gap-2">
                         <span class="material-symbols-outlined text-lg">contact_mail</span>
                         Contacto
@@ -213,7 +282,7 @@
             <div class="lg:col-span-5 hidden lg:block"></div>
 
             <!-- COLUMNA DERECHA: Educación + Habilidades + Pasiones -->
-            <div class="lg:col-span-4 flex flex-col gap-8">
+            <div id="habilidades" class="lg:col-span-4 flex flex-col gap-8 scroll-mt-24">
                 <!-- Education -->
                 <section class="text-right pr-4 lg:pr-12 pt-8">
                     <h3 class="text-white font-bold text-xl uppercase tracking-wider mb-4">Educación</h3>
@@ -247,7 +316,7 @@
                 </section>
 
                 
-                <!-- SECCIÓN: PASIONES  -->
+                <!-- SECCIÓN: PASIONES -->
                 
                 <section class="glass-panel p-6 shadow-2xl bg-cv-glass-bg border border-cv-glass-border backdrop-blur-md rounded-lg">
                     <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-sm flex items-center gap-2 justify-end">
@@ -350,7 +419,7 @@
             <div class="lg:col-span-2 hidden lg:block"></div>
 
             <!-- Bottom Right: About Me -->
-            <div class="lg:col-span-6 flex items-end justify-end mt-8 lg:mt-0">
+            <div id="sobre-mi" class="lg:col-span-6 flex items-end justify-end mt-8 lg:mt-0 scroll-mt-24">
                 <section class="glass-panel p-8 max-w-xl border border-white/10 bg-white/5 backdrop-blur-md rounded-lg">
                     <h3 class="text-cv-green font-bold uppercase tracking-wider mb-6 text-lg">SOBRE MI</h3>
                     <div class="flex gap-8 mb-6">
@@ -377,7 +446,7 @@
 
         <!-- PROYECTOS PERSONALES - ANCHO COMPLETO -->
 
-        <div class="relative z-20 w-full mt-8">
+        <div id="proyectos" class="relative z-20 w-full mt-8 scroll-mt-24">
             <section class="glass-panel p-8 bg-cv-glass-bg border border-cv-glass-border backdrop-blur-md rounded-lg">
                 <div class="flex items-center justify-between mb-8">
                     <h3 class="text-cv-green font-bold uppercase tracking-wider text-lg flex items-center gap-3">
@@ -749,6 +818,27 @@
                 icon.classList.add('active');
             }
         }
+
+        // MENÚ MÓVIL
+    
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
     </script>
 
     <script src="cargar_componentes.js"></script>
