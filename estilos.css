@@ -44,7 +44,7 @@
     background: radial-gradient(circle, transparent 70%, #050505 100%);
     pointer-events: none;
 }*/
-/*body {
+body {
     font-family: 'Inter', sans-serif;
     background-color: #050505;
     color: #ffffff;
@@ -55,19 +55,20 @@
     background: rgba(30, 30, 30, 0.4);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(240, 234, 234, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
+}
 
-
-
+/* ═══════════════════════════════════════════════ */
 /* DESKTOP: imagen posicionada en el documento    */
-
+/* No se mueve con el scroll, se queda en su lugar */
+/* ═══════════════════════════════════════════════ */
 .main-image-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 150dvh;          /* Solo el alto de la pantalla, no más */
+    height: 160vh;          /* Solo el alto de la pantalla, no más */
     z-index: -1;
     overflow: hidden;
 }
@@ -78,7 +79,7 @@
     object-fit: cover;
     object-position: center 60%;
     opacity: 0.8;
-    transform: scale(0.6);
+    transform: scale(0.5);
     transform-origin: center 45%;
     mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 60%, transparent 100%), linear-gradient(to right, transparent 10%, black 10%, black 90%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 60%, transparent 100%), linear-gradient(to right, transparent 10%, black 20%, black 90%, transparent 100%);
@@ -96,9 +97,10 @@
     pointer-events: none;
 }
 
-
+/* ═══════════════════════════════════════════════ */
 /* MÓVIL: imagen fija (fixed) como fondo real     */
-
+/* Se queda pegada al viewport al hacer scroll    */
+/* ═══════════════════════════════════════════════ */
 @media (max-width: 768px) {
     .main-image-container {
         position: fixed;    /* En móvil sí es fixed, como fondo */
