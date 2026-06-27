@@ -63,7 +63,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 90%;
+    width: 100%;
     height: 200vh;
     z-index: -1;
     overflow: hidden;
@@ -73,9 +73,9 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 70%;
+    object-position: center 60%;
     opacity: 0.8;
-    transform: scale(0.7);
+    transform: scale(0.6);
     transform-origin: center 45%;
     mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 60%, transparent 100%), linear-gradient(to right, transparent 10%, black 10%, black 90%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 60%, transparent 100%), linear-gradient(to right, transparent 10%, black 20%, black 90%, transparent 100%);
@@ -104,4 +104,21 @@ body {
     }
 
     .main-image {
-        /* Sin zoom, sin máscaras, imag
+        /* Sin zoom, sin máscaras, imagen completa */
+        transform: scale(1);
+        transform-origin: center center;
+        object-position: center top;
+        opacity: 0.6;
+        
+        /* Quita todas las máscaras */
+        mask-image: none;
+        -webkit-mask-image: none;
+        mask-composite: none;
+        -webkit-mask-composite: none;
+    }
+
+    .vignette {
+        /* Vignette más fuerte para que el texto resalte sobre la imagen completa */
+        background: radial-gradient(circle, transparent 40%, #050505 90%);
+    }
+}
